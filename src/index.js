@@ -4,10 +4,10 @@ import Layout from './Layout';
 
 import Home from './Home';
 
-import {configure} from 'mobx';
+import { configure } from 'mobx';
 
 configure({
-    enforceActions: true
+  enforceActions: true,
 });
 
 ReactDOM.render(
@@ -17,11 +17,11 @@ ReactDOM.render(
           <Switch>
             <Redirect exact from="/" to="/home/" />
             <Route exact path="/home" component={Home} key="home" />
-            
+
             <Route component={Home} />
           </Switch>
         </Layout>
       </Router>
     </div>,
-  document.getElementById('main')
+    document.getElementById('main'),
 );

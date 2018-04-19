@@ -1,4 +1,4 @@
-import {decorate, action, observable} from 'mobx';
+import { decorate, action, observable } from 'mobx';
 
 export default class ThemeStore {
    backgroundColor = '#ff0';
@@ -6,20 +6,20 @@ export default class ThemeStore {
    slogan = 'hello mobx';
 
    changeBackground(backgroundColor) {
-       this.backgroundColor = backgroundColor;
+     this.backgroundColor = backgroundColor;
    }
 
    changeSlogan(slogan) {
-       this.slogan = slogan;
+     this.slogan = slogan;
    }
 }
 
 
 decorate(ThemeStore, {
-    backgroundColor: observable,
-    slogan: observable,
-    changeBackground: action,
-    changeSlogan: action
+  backgroundColor: observable,
+  slogan: observable,
+  changeBackground: action,
+  changeSlogan: action,
 });
 
 /*
